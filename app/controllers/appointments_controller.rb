@@ -2,21 +2,18 @@ class AppointmentsController < ApplicationController
 
     # def new 
     #     @appointment = Appointment.new
-    #     @doctor = @appointment.doctor
-    #     @patient = @appointment.patient
-        
     # end 
 
-    def create
-        Appointment.create(appointment_params)
-        redirect_to appointment_path
-    end 
- 
+    
+    # def create
+    #     Appointment.create(appointment_params)
+    #     redirect_to appointment_path
+    # end 
 
     def show 
         @appointment= Appointment.find(params[:id])
-        @doctor = @appointment.doctor
-        @patient = @appointment.patient
+        # @doctor = @appointment.doctors
+        # @patient = @appointment.patients
     end 
 
     # private 
@@ -24,7 +21,4 @@ class AppointmentsController < ApplicationController
     # def appointment_params
     #     params.require(:appointment)
     # end 
-
-
-
 end
