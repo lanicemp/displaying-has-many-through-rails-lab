@@ -7,10 +7,10 @@ class AppointmentsController < ApplicationController
         
     # end 
 
-    # def create
-    #     Appointment.create(appointment_params)
-    #     redirect_to appointment_path
-    # end 
+    def create
+        Appointment.create(appointment_params)
+        redirect_to appointment_path
+    end 
  
 
     def show 
